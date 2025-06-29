@@ -13,10 +13,13 @@
 
 <!-- Project Contributions -->
 <div class="mb-16">
-  <div class="flex items-center justify-center mb-8">
-    <Users class="w-6 h-6 text-blue-600 mr-3" />
-    <h3 class="text-3xl font-bold text-slate-800">Project Contributions</h3>
-  </div>
+<div class="flex w-full flex-col sm:flex-row items-center justify-center mb-8">
+  <Users class="w-6 h-6 text-blue-600 mb-2 sm:mb-0 sm:mr-3" />
+  <h3 class="text-3xl font-bold text-slate-800 text-center">
+    Project Contributions
+  </h3>
+</div>
+
 
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
     <div
