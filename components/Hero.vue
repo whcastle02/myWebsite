@@ -27,7 +27,7 @@
         </h1>
         <h3 class="text-2xl md:text-3xl text-gray-300 mb-6">Developer Intern</h3>
         <p class="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl leading-relaxed">
-          Just do vibe coding with Security I guest 😏😏, ongoing to full-stack developer
+          Just do vibe coding with Security I guess 😏😏, ongoing to full-stack developer
           <br />
           Now Chat-GPT is my partner and love Outdoor activity
         </p>
