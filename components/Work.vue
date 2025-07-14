@@ -141,4 +141,28 @@ const projectContributions = [
 //     image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop',
 //   },
 // ]
+
+
+
+//Seo use when has pages 
+// useHead({
+//   title: 'My Portfolio – Ubaidah Nazri',
+//   meta: [
+//     { name: 'description', content: 'Full-stack developer portfolio of Ubaidah Nazri with work in Vue, Node, and AI.' },
+//     { name: 'keywords', content: 'Vue, Nuxt, Developer, AI, Portfolio, Malaysia' },
+
+//     // Open Graph
+//     { property: 'og:title', content: 'Ubaidah Nazri – Developer Portfolio' },
+//     { property: 'og:description', content: 'Explore projects in Vue, Nuxt, and AI.' },
+//     { property: 'og:image', content: '/og-cover.png' },
+//     { property: 'og:type', content: 'website' },
+
+//     // Twitter Card
+//     { name: 'twitter:card', content: 'summary_large_image' },
+//     { name: 'twitter:title', content: 'Ubaidah Nazri – Portfolio' },
+//     { name: 'twitter:description', content: 'My latest web, mobile and AI projects.' },
+//     { name: 'twitter:image', content: '/og-cover.png' },
+//   ],
+// })
+
 </script>
