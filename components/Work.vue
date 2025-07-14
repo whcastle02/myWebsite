@@ -51,7 +51,7 @@
             rel="noopener noreferrer"
             class="px-4 py-2 bg-white text-green-600 text-sm rounded-lg hover:text-white hover:bg-green-700 transition"
           >
-            <Icon name="material-symbols:android" class="size-5"/>
+            <Icon name="material-symbols:android" class="size-6"/>
           </a>
           <a
             v-if="project.ios"
@@ -60,16 +60,25 @@
             rel="noopener noreferrer"
             class="px-4 py-2 bg-white text-black text-sm rounded-lg hover:text-white hover:bg-black transition"
           >
-            <Icon name="tdesign:logo-apple-filled" class="size-5"/>
+            <Icon name="tdesign:logo-apple-filled" class="size-6"/>
+          </a>
+                    <a
+            v-if="project.huawei"
+            :href="project.huawei"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-4 py-2 bg-white text-red-600 text-sm rounded-lg hover:text-white hover:bg-red-600 transition"
+          >
+            <Icon name="simple-icons:huawei" class="size-6"/>
           </a>
           <a
             v-if="project.website"
             :href="project.website"
             target="_blank"
             rel="noopener noreferrer"
-            class="px-4 py-2 text-blue-700 ml-auto text-sm rounded hover:bg-gray-300 "
+            class="px-4 py-2 text-gray-400 ml-auto text-sm rounded hover:text-blue-500  "
           >
-          <Icon name="fluent:compose-24-filled" class="size-5"/>
+          <Icon name="fluent:compose-24-filled" class="size-6"/>
         </a>
         </div>
       </div>
@@ -115,6 +124,7 @@ const projectContributions = [
     website: 'https://marangdigital.firstcityparking.com.my/',
     android: 'https://play.google.com/store/apps/details?id=com.MarangDigital.app&pcampaignid=web_share',
     ios: 'https://apps.apple.com/my/app/marang-digital/id6744386524',
+    huawei: 'https://appgallery.huawei.com/#/app/C113813065',
   },
 ]
 

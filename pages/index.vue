@@ -8,7 +8,7 @@ import Contact from '~/components/Contact.vue'
 
 
 useHead({
-  title: 'My Portfolio - Ubaidah Nazri',
+  title: 'Porfolio',
   meta: [
     { name: 'description', content: 'Full-stack developer portfolio of Ubaidah Nazri with work in Vue, Node, and AI.' },
     { name: 'keywords', content: 'Vue, Nuxt, Developer, AI, Portfolio, Malaysia' },
