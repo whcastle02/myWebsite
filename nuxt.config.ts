@@ -9,6 +9,10 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
 
+  modules: [// ✅ Add this line
+  'unplugin-icons/nuxt', 
+  '@nuxt/icon'],
+
   vite: {
     plugins: [tsconfigPaths()]
   },

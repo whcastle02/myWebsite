@@ -29,10 +29,13 @@ const socialLinks = [
             I'm always open to discussing new opportunities, interesting projects, 
             or just having a conversation about technology and development.
           </p>
-          <div class="flex items-center gap-3 text-gray-300">
-            <MapPin class="w-5 h-5" />
-            <span>Available for remote work</span>
-          </div>
+<div class="flex items-center gap-3 text-green-400 font-medium">
+  <MapPin class="size-10" />
+  <span>
+    Open to remote roles and on-site work in Malaysia (MYT, UTC+8)
+  </span>
+</div>
+
         </div>
 
         <!-- Social Links -->

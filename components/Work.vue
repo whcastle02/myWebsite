@@ -43,25 +43,34 @@
         <p class="text-slate-600 leading-relaxed mb-4">{{ project.description }}</p>
 
         <!-- App Store Links -->
-        <div class="flex gap-3 mt-4">
+        <div class="flex gap-1 mt-4 items-center">
           <a
             v-if="project.android"
             :href="project.android"
             target="_blank"
             rel="noopener noreferrer"
-            class="px-4 py-2 bg-green-600 text-white text-sm rounded-lg hover:bg-green-700 transition"
+            class="px-4 py-2 bg-white text-green-600 text-sm rounded-lg hover:text-white hover:bg-green-700 transition"
           >
-            Android
+            <Icon name="material-symbols:android" class="size-5"/>
           </a>
           <a
             v-if="project.ios"
             :href="project.ios"
             target="_blank"
             rel="noopener noreferrer"
-            class="px-4 py-2 bg-gray-800 text-white text-sm rounded-lg hover:bg-black transition"
+            class="px-4 py-2 bg-white text-black text-sm rounded-lg hover:text-white hover:bg-black transition"
           >
-            iOS
+            <Icon name="tdesign:logo-apple-filled" class="size-5"/>
           </a>
+          <a
+            v-if="project.website"
+            :href="project.website"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-4 py-2 text-blue-700 ml-auto text-sm rounded hover:bg-gray-300 "
+          >
+          <Icon name="fluent:compose-24-filled" class="size-5"/>
+        </a>
         </div>
       </div>
     </div>
@@ -103,6 +112,7 @@ const projectContributions = [
       'Contributed to the development of the system, focusing on user management and dashboard functionality.',
     role: 'System Contributor',
     logo: '/projectimage/marangdigital.png',
+    website: 'https://marangdigital.firstcityparking.com.my/',
     android: 'https://play.google.com/store/apps/details?id=com.MarangDigital.app&pcampaignid=web_share',
     ios: 'https://apps.apple.com/my/app/marang-digital/id6744386524',
   },
