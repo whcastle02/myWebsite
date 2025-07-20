@@ -60,7 +60,7 @@ const isMenuOpen = ref(false)
 const isScrolled = ref(false)
 
 const navItems = [
-  { name: 'Resume', href: 'https://drive.google.com/file/d/186pXMgHtJtn7kGdof9jVlju6PK8q8wF5/view', external: true },
+  { name: 'Resume', href: 'https://drive.google.com/file/d/163EqZpOzvsCQIEMIZupNpVbaOgdwUjWC/view?usp=sharing', external: true },
   { name: 'About', href: '#about', external: false },
   { name: 'Work', href: '#work', external: false },
   { name: 'Contact', href: '#contact', external: false },
