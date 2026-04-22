@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: false },
 
- app: {
+  app: {
     head: {
       titleTemplate: '%s - Ubaidah Nazri',
       meta: [
@@ -18,8 +18,21 @@ export default defineNuxtConfig({
     }
   },
 
-    modules: [
-  '@nuxt/icon'],
+  modules: [
+    '@nuxt/icon',
+    '@nuxtjs/color-mode',
+    '@nuxt/content'
+  ],
+
+  colorMode: {
+    classSuffix: '',
+    preference: 'system', // default value of $colorMode.preference
+    fallback: 'dark', // fallback value if not system preference found
+  },
+
+  content: {
+    // Content module configuration
+  },
 
   css: [
     '~/assets/css/main.css'
