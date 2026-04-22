@@ -13,10 +13,10 @@
           <div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
             <div class="absolute top-0 left-0 w-2 h-full bg-blue-500"></div>
             <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-              Vibe Coding Intern with a Passion for Innovation
+              Developer to Farmer
             </h3>
             <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
-              Currently in my final year of <strong>B.Com.Sc. (Hons) in Information Security and Assurance</strong> at <strong>Universiti Sains Islam Malaysia (USIM)</strong>. I'm gaining hands-on experience through my internship, on an exciting journey to become a <strong>full-stack developer</strong>. My focus is on building robust web and mobile applications while upholding strong security practices.
+              Bachelor Degree of <strong>B.Com.Sc. (Hons) in Information Security and Assurance</strong> at <strong>Universiti Sains Islam Malaysia (USIM)</strong>. I'm gaining hands-on experience through my internship, on an exciting journey to become a <strong>full-stack developer</strong>. My focus is on building robust web and mobile applications while upholding strong security practices.
             </p>
             <p class="text-lg text-slate-600 dark:text-slate-400 italic border-l-2 border-slate-300 dark:border-slate-700 pl-4 py-2 mt-6">
               "Off the clock, I love getting outside for hiking, biking, or camping, and whipping up something delicious at home."

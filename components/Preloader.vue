@@ -57,14 +57,15 @@ import { ref, computed, onMounted } from 'vue'
 const isLoading = ref(true)
 const step = ref(0)
 const progress = ref(0)
+const isPreloaderDone = useState('preloader-done', () => false)
 
 const phrases = [
-  { emoji: '😴', text: 'Tengah kejut server dari tidur...' },
-  { emoji: '🏍️', text: '"Otw boss, dah gerak dah ni..."' },
-  { emoji: '🚦', text: 'Alamak, jem teruk kat Federal Highway...' },
-  { emoji: '☕', text: 'Singgah mamak jap, order Teh Tarik ikat tepi...' },
-  { emoji: '🚗', text: 'Dah sampai! Tengah pusing cari parking...' },
-  { emoji: '🎉', text: 'Okay cun, pintu dah bukak!' }
+  { emoji: '😴', text: 'Jap, server baru bangun dari tidur...' },
+  { emoji: '🏍️', text: 'Sabar jap...' },
+  { emoji: '🚦', text: 'X yah nekan ii la' },
+  { emoji: '☕', text: 'Sikit Lagii' },
+  { emoji: '🚗', text: 'Jgn rushing ii la' },
+  { emoji: '🎉', text: 'Okay done' }
 ]
 
 const currentEmoji = computed(() => phrases[step.value].emoji)
@@ -85,6 +86,9 @@ onMounted(() => {
   setTimeout(() => {
     isLoading.value = false
     document.body.style.overflow = ''
+    setTimeout(() => {
+      isPreloaderDone.value = true
+    }, 400) // Trigger fade in halfway through the preloader sliding up
   }, 5600)
 })
 </script>

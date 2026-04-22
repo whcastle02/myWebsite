@@ -1,8 +1,9 @@
 <script setup>
-import { ArrowUpRight, ArrowRight, ArrowDownRight, ArrowDownLeft, Sun, Moon } from 'lucide-vue-next'
+import { ArrowRight, ArrowLeft, Sun, Moon } from 'lucide-vue-next'
 import bgImage from '~/assets/img/IMG_4676-removebg-preview.png'
 
 const colorMode = useColorMode()
+const isPreloaderDone = useState('preloader-done', () => false)
 
 const toggleTheme = () => {
   colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
@@ -36,15 +37,24 @@ useHead({
 
     <!-- Huge Background Text for Depth -->
     <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden opacity-30 dark:opacity-40">
-      <h2 class="text-[12vw] font-black text-slate-300 dark:text-slate-600 whitespace-nowrap tracking-tighter select-none">
-        UBAIDAH NAZRI
+      <h2 class="text-[20vw] md:text-[12vw] font-black text-slate-300 dark:text-slate-600 tracking-tighter select-none text-center leading-none flex flex-col md:flex-row gap-0 md:gap-8">
+        <span>UBAIDAH</span>
+        <span>NAZRI</span>
       </h2>
     </div>
 
     <div class="relative z-10 w-full h-full flex flex-col items-center justify-center p-4">
       
       <!-- Central Portrait Image (Transparent PNG) -->
-      <img :src="bgImage" alt="Portrait" class="absolute bottom-0 w-[90%] max-w-2xl lg:max-w-3xl object-contain object-bottom z-10 drop-shadow-2xl pointer-events-none" style="max-height: 85vh;" />
+      <img 
+        :src="bgImage" 
+        alt="Portrait" 
+        :class="[
+          'absolute bottom-0 w-[95%] max-[540px]:w-[85%] md:w-[90%] max-w-2xl lg:max-w-3xl object-contain object-bottom z-10 drop-shadow-2xl pointer-events-none transition-all duration-[1500ms] ease-out',
+          isPreloaderDone ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+        ]" 
+        style="max-height: 85vh;" 
+      />
 
       <!-- Foreground Text and Links Container -->
       <div class="relative z-20 w-full h-full max-w-7xl mx-auto flex flex-col items-center justify-center pointer-events-none">
@@ -53,41 +63,41 @@ useHead({
         <div class="absolute inset-0 pointer-events-auto">
           
           <!-- Top Left: About -->
-          <div class="absolute top-24 left-4 md:top-32 md:left-24 lg:left-32 group">
+          <div class="absolute top-8 left-2 max-[540px]:top-[20%] max-[540px]:left-4 md:top-32 md:left-24 lg:left-32 group">
             <NuxtLink to="/about" class="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-slate-800 dark:text-white hover:text-red-600 dark:hover:text-red-500 transition-all duration-300 hover:scale-110 transform">
-              <div class="p-3 bg-white/50 dark:bg-black/50 backdrop-blur-md rounded-full border border-white/20 shadow-lg group-hover:shadow-red-500/20 group-hover:border-red-500/50 transition-all">
-                <ArrowUpRight class="w-8 h-8 md:w-10 md:h-10 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300" stroke-width="2.5" />
+              <div class="p-2 md:p-3 bg-white/50 dark:bg-black/50 backdrop-blur-md rounded-full border border-white/20 shadow-lg group-hover:shadow-red-500/20 group-hover:border-red-500/50 transition-all">
+                <ArrowRight class="w-6 h-6 max-[540px]:w-5 max-[540px]:h-5 md:w-10 md:h-10 rotate-90 md:rotate-0 group-hover:translate-y-1 md:group-hover:translate-y-0 md:group-hover:translate-x-1 transition-transform duration-300" stroke-width="2.5" />
               </div>
-              <span class="font-graffiti text-2xl md:text-4xl tracking-wide drop-shadow-md">About</span>
+              <span class="font-graffiti text-xl max-[540px]:text-lg md:text-4xl tracking-wide drop-shadow-md">About</span>
             </NuxtLink>
           </div>
 
           <!-- Top Right: Experience -->
-          <div class="absolute top-32 right-4 md:top-40 md:right-24 lg:right-32 group">
+          <div class="absolute top-12 right-2 max-[540px]:top-[25%] max-[540px]:right-4 md:top-40 md:right-24 lg:right-32 group">
             <NuxtLink to="/experience" class="flex flex-col-reverse md:flex-row items-center gap-2 md:gap-4 text-slate-800 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110 transform">
-              <span class="font-graffiti text-2xl md:text-4xl tracking-wide md:order-1 order-2 drop-shadow-md">Experience</span>
-              <div class="p-3 bg-white/50 dark:bg-black/50 backdrop-blur-md rounded-full border border-white/20 shadow-lg group-hover:shadow-blue-500/20 group-hover:border-blue-500/50 transition-all md:order-2 order-1">
-                <ArrowRight class="w-8 h-8 md:w-10 md:h-10 group-hover:translate-x-1 transition-transform duration-300" stroke-width="2.5" />
+              <span class="font-graffiti text-xl max-[540px]:text-lg md:text-4xl tracking-wide md:order-1 order-2 drop-shadow-md">Experience</span>
+              <div class="p-2 md:p-3 bg-white/50 dark:bg-black/50 backdrop-blur-md rounded-full border border-white/20 shadow-lg group-hover:shadow-blue-500/20 group-hover:border-blue-500/50 transition-all md:order-2 order-1">
+                <ArrowLeft class="w-6 h-6 max-[540px]:w-5 max-[540px]:h-5 md:w-10 md:h-10 rotate-90 md:rotate-0 group-hover:-translate-y-1 md:group-hover:translate-y-0 md:group-hover:-translate-x-1 transition-transform duration-300" stroke-width="2.5" />
               </div>
             </NuxtLink>
           </div>
 
           <!-- Bottom Left: Work -->
-          <div class="absolute bottom-32 left-8 md:bottom-40 md:left-32 lg:left-48 group">
+          <div class="absolute top-[30%] left-2 max-[540px]:top-auto max-[540px]:bottom-24 max-[540px]:left-4 md:top-auto md:translate-y-0 md:bottom-40 md:left-32 lg:left-48 group">
             <NuxtLink to="/work" class="flex flex-col md:flex-row items-center gap-2 md:gap-4 text-slate-800 dark:text-white hover:text-amber-600 dark:hover:text-amber-400 transition-all duration-300 hover:scale-110 transform">
-              <div class="p-3 bg-white/50 dark:bg-black/50 backdrop-blur-md rounded-full border border-white/20 shadow-lg group-hover:shadow-amber-500/20 group-hover:border-amber-500/50 transition-all">
-                <ArrowDownLeft class="w-8 h-8 md:w-10 md:h-10 group-hover:-translate-x-1 group-hover:translate-y-1 transition-transform duration-300" stroke-width="2.5" />
+              <div class="p-2 md:p-3 bg-white/50 dark:bg-black/50 backdrop-blur-md rounded-full border border-white/20 shadow-lg group-hover:shadow-amber-500/20 group-hover:border-amber-500/50 transition-all">
+                <ArrowRight class="w-6 h-6 max-[540px]:w-5 max-[540px]:h-5 md:w-10 md:h-10 rotate-90 md:rotate-0 group-hover:translate-y-1 md:group-hover:translate-y-0 md:group-hover:translate-x-1 transition-transform duration-300" stroke-width="2.5" />
               </div>
-              <span class="font-graffiti text-2xl md:text-4xl tracking-wide drop-shadow-md">Work</span>
+              <span class="font-graffiti text-xl max-[540px]:text-lg md:text-4xl tracking-wide drop-shadow-md">Work</span>
             </NuxtLink>
           </div>
 
           <!-- Bottom Right: Contact -->
-          <div class="absolute bottom-24 right-8 md:bottom-32 md:right-32 lg:right-48 group">
+          <div class="absolute top-[35%] right-2 max-[540px]:top-auto max-[540px]:bottom-32 max-[540px]:right-4 md:top-auto md:translate-y-0 md:bottom-32 md:right-32 lg:right-48 group">
             <NuxtLink to="/contact" class="flex flex-col-reverse md:flex-row items-center gap-2 md:gap-4 text-slate-800 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-all duration-300 hover:scale-110 transform">
-              <span class="font-graffiti text-2xl md:text-4xl tracking-wide md:order-1 order-2 drop-shadow-md">Contact</span>
-              <div class="p-3 bg-white/50 dark:bg-black/50 backdrop-blur-md rounded-full border border-white/20 shadow-lg group-hover:shadow-purple-500/20 group-hover:border-purple-500/50 transition-all md:order-2 order-1">
-                <ArrowDownRight class="w-8 h-8 md:w-10 md:h-10 group-hover:translate-x-1 group-hover:translate-y-1 transition-transform duration-300" stroke-width="2.5" />
+              <span class="font-graffiti text-xl max-[540px]:text-lg md:text-4xl tracking-wide md:order-1 order-2 drop-shadow-md">Contact</span>
+              <div class="p-2 md:p-3 bg-white/50 dark:bg-black/50 backdrop-blur-md rounded-full border border-white/20 shadow-lg group-hover:shadow-purple-500/20 group-hover:border-purple-500/50 transition-all md:order-2 order-1">
+                <ArrowLeft class="w-6 h-6 max-[540px]:w-5 max-[540px]:h-5 md:w-10 md:h-10 rotate-90 md:rotate-0 group-hover:-translate-y-1 md:group-hover:translate-y-0 md:group-hover:-translate-x-1 transition-transform duration-300" stroke-width="2.5" />
               </div>
             </NuxtLink>
           </div>
