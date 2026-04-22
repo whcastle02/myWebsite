@@ -11,6 +11,9 @@ module.exports = {
   darkMode: 'class', // Enables class-based dark mode (.dark)
   theme: {
     extend: {
+      fontFamily: {
+        graffiti: ['"Permanent Marker"', 'cursive'],
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',

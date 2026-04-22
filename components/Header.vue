@@ -91,10 +91,10 @@ const toggleTheme = () => {
 
 const navItems = [
   { name: 'Resume', href: 'https://drive.google.com/file/d/163EqZpOzvsCQIEMIZupNpVbaOgdwUjWC/view?usp=sharing', external: true },
-  { name: 'About', href: '/#about', external: false },
-  { name: 'Experience', href: '/#experience', external: false },
-  { name: 'Work', href: '/#work', external: false },
-  { name: 'Contact', href: '/#contact', external: false },
+  { name: 'About', href: '/about', external: false },
+  { name: 'Experience', href: '/experience', external: false },
+  { name: 'Work', href: '/work', external: false },
+  { name: 'Contact', href: '/contact', external: false },
 ]
 
 const scrollToHome = () => {
