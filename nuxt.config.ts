@@ -18,7 +18,7 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ["@nuxt/content"],
+  modules: ["@nuxt/content", "@vercel/analytics"],
   runtimeConfig: { public: { siteUrl: "" } },
   content: { ignores: ["(^|/)blog/", "\\.draft\\.md$"] },
   css: ["~/assets/css/main.css"],
