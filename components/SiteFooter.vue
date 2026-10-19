@@ -1,6 +1,7 @@
 <script setup>
 import { ArrowUpRight } from "lucide-vue-next";
 import { profile, navigation } from "~/data/portfolio";
+const { openPreferences } = usePrivacyPreferences();
 </script>
 <template>
   <footer class="site-footer container">
@@ -28,8 +29,16 @@ import { profile, navigation } from "~/data/portfolio";
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© {{ new Date().getFullYear() }} Ubaidah Nazri</span
-      ><span>Built with Nuxt. Made to keep growing.</span>
+      <span>© {{ new Date().getFullYear() }} Ubaidah Nazri</span>
+      <div class="footer-privacy">
+        <NuxtLink to="/privacy"
+          >Privacy / <span lang="ms">Privasi</span></NuxtLink
+        >
+        <button type="button" @click="openPreferences">
+          Privacy choices / <span lang="ms">Pilihan privasi</span>
+        </button>
+      </div>
+      <span>Built with Nuxt. Made to keep growing.</span>
     </div>
   </footer>
 </template>

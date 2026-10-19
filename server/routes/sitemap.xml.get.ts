@@ -14,6 +14,7 @@ export default defineEventHandler(async (event) => {
     "/journal",
     "/about",
     "/contact",
+    "/privacy",
     ...posts.map((post) => post._path),
   ];
   const escape = (value: string) =>

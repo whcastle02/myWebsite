@@ -9,6 +9,7 @@ const pages = [
   ["/journal/first-post", "Hello, and welcome", "What to expect"],
   ["/about", "A little about me", "Junior Software Engineer"],
   ["/contact", "Let’s connect", "mailto:ubaidahnazr@gmail.com"],
+  ["/privacy", "Privacy", "Bahasa Melayu"],
 ];
 for (const [path, heading, content] of pages) {
   const response = await fetch(new URL(path, base));

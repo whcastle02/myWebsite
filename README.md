@@ -46,6 +46,16 @@ Set optional `NUXT_PUBLIC_SITE_URL` to the final origin (for example, `https://y
 
 The theme uses a one-time portrait entrance, short page and menu transitions, tactile button presses, card hover lifts, and restrained section movement as it enters the viewport in supported browsers. Content never requires an animation to become available. Reduced-motion settings disable movement. A keyboard skip link, visible focus styles, labelled controls, and copy feedback are included.
 
+## Privacy and analytics
+
+The bilingual English / Bahasa Melayu notice is at `/privacy`, with Privacy and Privacy choices links in the footer. Vercel Web Analytics is **off by default** and starts only after a valid Allow choice. Rejecting or closing the prompt leaves it off. Browser GPC / DNT signals also keep it off. Withdrawal saves the change and reloads the page to unload analytics code and navigation hooks. Preference storage contains only a notice version, choice and time, and expires on a later visit after 180 days.
+
+The automatic `@vercel/analytics` Nuxt module is intentionally not registered: it would bypass consent. The client plugin initializes the package's Nuxt runtime after permission, with URL minimisation and custom events blocked. Do not add an additional Analytics component or automatic module.
+
+Run `yarn test:privacy` for preference and URL tests. Browser checks run against a started production build with `PRIVACY_TEST_BASE_URL` and `yarn test:privacy:browser`; install Chromium with `yarn playwright install chromium`, or set `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` to an existing executable. Test analytics scripts are stubbed, so test visits are not sent to Vercel.
+
+See [privacy operations and owner review](docs/privacy-operations.md) for data flows and the provider/account/legal details requiring review. A website notice and consent controls do not establish ISO certification or immunity from legal claims.
+
 ## Artwork source
 
 The clay portrait was extracted, with transparency, from the user-supplied proposal PDF and optimized to WebP. The full-resolution original is retained at `assets/img/ubaidah-clay-original.png` and is not imported into the application bundle.

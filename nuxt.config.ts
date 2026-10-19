@@ -18,7 +18,9 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ["@nuxt/content", "@vercel/analytics"],
+  // Analytics is initialized by the client plugin only after an explicit choice.
+  // The automatic module would load it before consent.
+  modules: ["@nuxt/content"],
   runtimeConfig: { public: { siteUrl: "" } },
   content: { ignores: ["(^|/)blog/", "\\.draft\\.md$"] },
   css: ["~/assets/css/main.css"],
