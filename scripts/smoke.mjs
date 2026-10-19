@@ -4,7 +4,7 @@ const base = process.env.SMOKE_BASE_URL || "http://127.0.0.1:3000";
 const pages = [
   ["/", "Ubaidah Nazri", "Building web and"],
   ["/work", "Selected work", "Marang Digital"],
-  ["/work/marang-digital", "Marang Digital", "SYNTHETIC DATA ONLY"],
+  ["/work/marang-digital", "Marang Digital", "Queries &amp; reporting"],
   ["/journal", "Notes and stories", "Hello, and welcome"],
   ["/journal/first-post", "Hello, and welcome", "What to expect"],
   ["/about", "A little about me", "Junior Software Engineer"],

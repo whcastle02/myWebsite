@@ -53,8 +53,7 @@ usePortfolioSeo({
         <p class="eyebrow">IN THIS CONTRIBUTION</p>
         <a href="#context">01 · The context</a
         ><a href="#contribution">02 · My contribution</a
-        ><a href="#example">03 · Reporting example</a
-        ><a href="#product">04 · Product context</a>
+        ><a href="#product">03 · Product context</a>
       </aside>
       <div class="case-body">
         <section id="context">
@@ -115,25 +114,8 @@ usePortfolioSeo({
             >
           </div>
         </section>
-        <section id="example">
-          <p class="eyebrow">03 / A SMALL INTERACTIVE EXAMPLE</p>
-          <h2>Explore a reporting flow.</h2>
-          <p>
-            Try narrowing a set of fictional records by date and status. This
-            standalone example illustrates a reporting interaction; it is not
-            the production interface or evidence of an exact feature I shipped.
-          </p>
-          <ReportingDemo />
-          <h3 class="subheading">What this example makes visible</h3>
-          <p>
-            Inputs are applied together, an invalid date range keeps the
-            existing results in place, and an empty result offers a clear way to
-            reset. These are decisions in this portfolio demo, rather than
-            claims about the original product.
-          </p>
-        </section>
         <section id="product">
-          <p class="eyebrow">04 / PRODUCT CONTEXT</p>
+          <p class="eyebrow">03 / PRODUCT CONTEXT</p>
           <h2>See the product in the world.</h2>
           <p>
             These public links provide context for Marang Digital. They

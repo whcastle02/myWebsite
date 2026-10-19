@@ -38,7 +38,7 @@ const steps = [
   {
     number: "03",
     title: "A closer look",
-    text: "Explore the tools behind the work and a small reporting example with synthetic data.",
+    text: "Explore the modules, tools and deployment support behind this team contribution.",
     icon: GitBranch,
     tint: "lilac",
   },

@@ -24,7 +24,7 @@ PORT=3000 HOST=0.0.0.0 node .output/server/index.mjs
 yarn test:smoke
 ```
 
-`SMOKE_BASE_URL` can target a different running server. The smoke checks exercise server-rendered pages, public assets, the experience redirect, unpublished routes, canonical and share metadata, and the sitemap. No backend, database, secrets, or production credentials are required. The reporting sandbox is local and uses five fictional records.
+`SMOKE_BASE_URL` can target a different running server. The smoke checks exercise server-rendered pages, public assets, the experience redirect, unpublished routes, canonical and share metadata, and the sitemap. No backend, database, secrets, or production credentials are required.
 
 ## Content and links
 
@@ -33,7 +33,7 @@ yarn test:smoke
 - Only entries with `status: published` appear on public journal pages.
 - Keep unpublished work outside `content/`, or use a `.draft.md` filename. Those files are excluded from the content API, not merely hidden from lists. **A draft status by itself does not make a file private in Nuxt Content.**
 - The older sample posts in `content/blog/` remain preserved but are excluded from the content API. The unverified hiking story is not published. The existing welcome post has been adapted for the Journal.
-- The Marang contribution page uses the original experience record. Its preview and sandbox are clearly labelled illustrations, with no claimed production metrics.
+- The Marang contribution page uses the original experience record. The project card's preview is clearly labelled as an illustration, with no claimed production metrics.
 - A project outline is provided in `docs/templates/project.md`. Add a real route and an index entry when the contribution is ready; no fictional projects are included.
 - `/experience` redirects permanently to `/about#experience`.
 - The existing Google Drive resume URL is retained. Replace it with a local PDF when a verified resume file is available; do not use the proposal PDF as a resume.
@@ -44,7 +44,7 @@ Set optional `NUXT_PUBLIC_SITE_URL` to the final origin (for example, `https://y
 
 ## Motion and accessibility
 
-The theme uses a one-time portrait entrance, short page and menu transitions, tactile button presses, card hover lifts, and restrained section movement as it enters the viewport in supported browsers. Content never requires an animation to become available. Reduced-motion settings disable movement. A keyboard skip link, visible focus styles, labelled controls, copy feedback, and resettable demo states are included.
+The theme uses a one-time portrait entrance, short page and menu transitions, tactile button presses, card hover lifts, and restrained section movement as it enters the viewport in supported browsers. Content never requires an animation to become available. Reduced-motion settings disable movement. A keyboard skip link, visible focus styles, labelled controls, and copy feedback are included.
 
 ## Artwork source
 
